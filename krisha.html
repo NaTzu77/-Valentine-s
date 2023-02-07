@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+
+    body {
+        background-color: #EB455F;
+    }
+
+    .text {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: 40px;
+    }
+
+    .image {
+        width: 100px;
+    }
+
+    button{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        border: none;
+        width: 60px;
+        height: 30px;
+        margin-right: 2px;
+        border-radius: 20px;
+    }
+
+    .button-1{
+        background-color: rgb(13, 207, 13);
+        border: none;
+    }
+
+    .button-2{
+        margin-top: 20px;
+        display: block;
+        background-color: red;
+        color: white;
+    }
+
+
+
+
+</style>
+
+<body>
+
+
+    <div class="msg-box">
+        <p class="text">
+            DO YOU HAVE A DATE ON VALENTINE'S DAY?
+        </p>
+    </div>
+
+    <img style="width: 100%;" id="image" src="" />
+
+
+    <button class="button-1" id="btn">
+        Yes
+    </button>
+
+    <button class="button-2" type="button"
+        onclick="show()" id="btnID">
+        No
+    </button>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let position;
+        btn.addEventListener('mouseover', () => {
+            position = position ? 0 : 250;
+            btn.style.transform = 'translate(' + position + 'px, 0px)';
+        });
+
+        function show() {
+            let image = document.getElementById("image");
+
+            image.src =
+                "https://i.ibb.co/WzCwFhC/326747383-921525949023682-6829171265690931525-n.jpg"
+
+            document.getElementById("btnID")
+                .style.display = "none";
+        }
+    </script>
+</body>
+</html>
